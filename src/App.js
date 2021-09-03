@@ -26,7 +26,7 @@ class App extends React.Component {
         ev.preventDefault();
         this.setState({loadingGif: true});
         try{
-        const res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=0c3d98a5b19c136c67a54da99016b3df`);
+        const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=0c3d98a5b19c136c67a54da99016b3df`);
         const k = res.data.main.temp;
         const c = Math.round(k - 273.15);
         const lat = Math.round(res.data.coord.lat);
